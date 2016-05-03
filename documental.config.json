@@ -1,0 +1,9 @@
+{
+
+  "projectName"	: "OrganisationalHealthCheck",
+  "useApp" 		: true,
+  "liveLoad" 	: false,
+  "readme" 		: "./readme.md",
+  "verbose"		: false,
+  "port"		: 8090
+}

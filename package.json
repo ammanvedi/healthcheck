@@ -1,0 +1,29 @@
+{
+  "name": "orgheathcheck",
+  "version": "0.0.1",
+  "description": "An app to allow an organisation to perform an organiastion health check",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amman Vedi <amman.vedi@gmail.com> (https://github.com/ammanvedi)",
+  "license": "MIT",
+  "devDependencies": {
+    "documental": "^0.4.6",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^0.4.6",
+    "gulp-file": "^0.2.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-jasmine": "^2.3.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    "through2": "^2.0.1"
+  }
+}

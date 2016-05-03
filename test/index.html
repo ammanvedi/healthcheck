@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../dist/js/app.js" ></script>
+    <script>
+
+
+
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            window.el = document.createElement( 'div' );
+            window.el.classList.add( 'testel' );
+
+            var b =  document.querySelector( 'body' );
+            b.appendChild( window.el );
+
+
+            window.data = {
+                user : {
+                    name : "amman"
+                }
+            };
+
+            window.el = document.querySelector( ".testel" );
+            var bel = new bound.BoundElement( window.el, window.data, "user.name", "TEXT" );
+            var x = 4;
+
+        });
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

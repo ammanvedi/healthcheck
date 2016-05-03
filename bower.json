@@ -1,0 +1,23 @@
+{
+  "name": "orgheathcheck",
+  "description": "An app to allow an organisation to perform an organiastion health check",
+  "main": "index.js",
+  "authors": [
+    "Amman Vedi <amman.vedi@gmail.com> (https://github.com/ammanvedi)"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.5",
+    "mustache.js": "mustache#~2.2.1"
+  }
+}
