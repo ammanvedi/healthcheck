@@ -1,0 +1,44 @@
+$anim-duration: 0.5s;
+
+.btn {
+
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid $primary;
+  @include createTransition( background-color, $anim-duration, ease-out );
+
+  p {
+
+    @include createTransition( color, $anim-duration, ease-out );
+    color: $primary;
+    text-align: center;
+
+  }
+
+  &:hover {
+
+    background-color: $primary;
+
+    p {
+      color: white;
+    }
+  }
+
+  &.btn--centred {
+    margin: 0 auto;
+  }
+
+  &.btn--small {
+
+    max-width: 115px
+
+  }
+
+  &.btn--right {
+    float: right;
+  }
+
+}

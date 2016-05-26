@@ -1,0 +1,48 @@
+#viewContainer {
+
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+
+}
+
+.view {
+
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  top: 100vh;
+  overflow-y: scroll;
+
+  &.animated {
+    display: block;
+  }
+
+
+  &.hidden {
+
+    top: 100vh;
+    z-index: -1;
+
+    &.animated {
+
+    }
+
+    &.notAnimated {
+
+      display: none;
+
+    }
+  }
+
+  &.visible {
+
+    z-index: 1;
+    display: block;
+
+  }
+
+}

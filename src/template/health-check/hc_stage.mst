@@ -1,0 +1,32 @@
+
+
+<div class="row">
+    <div class="col__1-12">
+
+        <div class="connector"></div>
+
+    </div>
+
+    <div class="col__11-12">
+
+        <h1>{{stage.title}}</h1>
+        <h2>{{stage.subTitle}}</h2>
+
+        {{#stage.questions}}
+        <div class="question row">
+            <div class="col__12-12">
+                <h3>{{title}}</h3>
+                <h4>{{subtitle}}</h4>
+                {{#getQuestionMarkup}}{{/getQuestionMarkup}}
+            </div>
+
+        </div>
+
+        {{/stage.questions}}
+
+
+    </div>
+
+</div>
+
+

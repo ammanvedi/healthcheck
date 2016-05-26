@@ -1,0 +1,57 @@
+$logo: "../img/logo.png";
+$primary: #64819C;
+
+@mixin linearGradient($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+
+body{
+  max-height: 100vh;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  color: $primary;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.wrap {
+  min-width: 100% !important;
+}
+
+.logo {
+
+  background-image: url( $logo );
+  background-size: contain;
+  background-repeat: no-repeat;
+
+
+  &.logo--large {
+
+    width: 250px;
+    height: 250px;
+
+  }
+
+  &.logo--centred {
+
+    margin: 0 auto;
+
+  }
+
+}

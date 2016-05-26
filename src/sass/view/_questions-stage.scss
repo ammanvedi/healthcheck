@@ -1,0 +1,34 @@
+.question_stage {
+
+
+  .connector {
+
+    width: 2px;
+    height: 100vh;
+    background-color: $primary;
+
+  }
+
+
+  .question {
+
+      h3 {
+
+        &:after {
+          content: "";
+          width: 15px;
+          height: 15px;
+          border-radius: 20px;
+          position: absolute;
+          left: -20px;
+          opacity: 0.2;
+          background-color: $primary;
+        }
+
+      }
+
+  }
+
+
+
+}

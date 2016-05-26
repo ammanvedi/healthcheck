@@ -8,14 +8,19 @@ var through = require('through2');
 var htmlmin = require('gulp-htmlmin');
 var clean = require('gulp-clean');
 var path = require('path');
+var fileinclude = require('gulp-file-include');
 
 var config = require( './healthcheck.config.js' );
 
 gulp.task('sass', function(){
 	return gulp.src( config.src.sass )
 		.pipe(sass())
-		.pipe(concat('screen.css'))
 		.pipe(gulp.dest(config.dist.sass))
+});
+
+gulp.task('img', function(){
+	return gulp.src( config.src.img )
+		.pipe(gulp.dest(config.dist.img))
 });
 
 gulp.task('scripts', [ 'template' ], function() {
@@ -40,6 +45,12 @@ gulp.task('docs', function () {
 		.pipe(documental())
 });
 
+gulp.task('fileinclude', function() {
+	gulp.src(config.src.partial)
+		.pipe(fileinclude(config.fileInclude))
+		.pipe(gulp.dest(config.dist.partial));
+});
+
 var processTemplate = function() {
 
 	return through.obj(function(file, enc, cb) {
@@ -50,7 +61,7 @@ var processTemplate = function() {
 			nm = nm[ nm.length - 1 ];
 			nm = nm.split( ".mst" )[ 0 ];
 
-			var wrap = [ new Buffer( "window.templates." + nm + " ='" ), file.contents, new Buffer( "';" ) ];
+			var wrap = [ new Buffer( "window.app.templates." + nm + " ='" ), file.contents, new Buffer( "';" ) ];
 
 
 			file.contents = Buffer.concat(wrap);
@@ -68,4 +79,4 @@ gulp.task('template', function () {
 		.pipe(gulp.dest(config.src.templateBase))
 });
 
-gulp.task( 'default', ['scripts', 'sass' ] );
+gulp.task( 'default', ['scripts', 'img', 'sass', 'fileinclude' ] );

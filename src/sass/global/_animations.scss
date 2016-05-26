@@ -1,0 +1,98 @@
+// Animations for the views and view animation type
+
+@mixin createTransition( $property, $duration, $timing ) {
+
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+
+}
+
+@mixin fillMode( $fm ) {
+
+  -webkit-animation-fill-mode:$fm;
+  -moz-animation-fill-mode:$fm;
+  animation-fill-mode:$fm;
+
+}
+
+$viewAnimationDuration: 0.5s;
+
+@-webkit-keyframes slideup_in {
+  0%   { top : 100vh; }
+  1%   { display: block; }
+  100%  { top : 0; }
+
+}
+
+@-webkit-keyframes slideup_out {
+  0%   { top : 0px; }
+  10%   { top : 0px; }
+  100%  { top : -100vh; }
+}
+
+@-webkit-keyframes slidedown_in {
+  0%   { display: none;}
+  4%   { top: -100vh; }
+  5%   { display: block; }
+  100%  { top : 0; display: block; }
+}
+
+@-webkit-keyframes fadein {
+  0%   { opacity: 0; }
+  100%  { opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+  0%   { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+@-webkit-keyframes slidedown_out {
+  0%   { top : 0px; z-index: 1; }
+  10%   { top : 0px; }
+  100%  { top : 100vh; }
+}
+
+.slideup_in {
+
+  @include fillMode( forwards );
+
+  animation: slideup_in $viewAnimationDuration forwards;
+  -webkit-animation: slideup_in $viewAnimationDuration forwards;
+
+  &.reverseAnimation {
+    animation: slidedown_in $viewAnimationDuration forwards;
+    -webkit-animation: slidedown_in $viewAnimationDuration forwards;
+  }
+
+}
+
+.slideup_out {
+
+  @include fillMode( forwards );
+
+  animation: slideup_out $viewAnimationDuration forwards;
+  -webkit-animation: slideup_out $viewAnimationDuration forwards;
+
+  &.reverseAnimation {
+    animation: slidedown_out $viewAnimationDuration forwards;
+    -webkit-animation: slidedown_out $viewAnimationDuration forwards;
+  }
+
+}
+
+.fadein {
+
+  animation: fadein 2s forwards;
+  -webkit-animation: fadein 2s forwards;
+
+}
+
+.fadeout {
+
+  animation: fadeout 2s forwards;
+  -webkit-animation: fadeout 2s forwards;
+
+}

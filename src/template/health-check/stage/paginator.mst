@@ -1,0 +1,10 @@
+
+
+<div class="paginator">
+    <a class="btn btn--small btn--right js-btn-back">
+        <p>back</p>
+    </a>
+    <a class="btn btn--small btn--right js-btn-fwd">
+        <p>done</p>
+    </a>
+</div>

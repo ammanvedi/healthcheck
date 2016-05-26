@@ -1,0 +1,41 @@
+<div class="row">
+
+    <div class="col__12-12">
+
+        <div class="header">
+
+            <div class="logo logo--large logo--centred fadein"></div>
+
+            <div class="row">
+
+                <div class="col__2-12 col__md-1-12 col__sm-0-12"></div>
+                <div class="col__8-12 col__md-10-12 col__sm-12-12">
+
+                    <h1>Organisational Health Check</h1>
+
+                </div>
+                <div class="col__2-12 col__md-1-12 col__sm-0-12"></div>
+
+            </div>
+
+            <div class="row">
+                <div class="col__2-12 col__md-0-12 col__sm-0-12">
+                </div>
+                <div class="col__4-12 col__md-12-12 col__sm-12-12">
+                    <a class="btn btn--centred js-btn-about">
+                        <p>What is an OHC?</p>
+                    </a>
+                </div>
+                <div class="col__4-12 col__md-12-12 col__sm-12-12">
+                    <a class="btn btn--centred js-btn-ohc">
+                        <p>Start your health check</p>
+                    </a>
+                </div>
+                <div class="col__2-12 col__md-0-12 col__sm-0-12"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

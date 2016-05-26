@@ -1,0 +1,5 @@
+<div class="wrap view hidden {{additionalClasses}} {{animation.EXTRA}} " data-view-name="{{name}}">
+
+
+
+</div>
